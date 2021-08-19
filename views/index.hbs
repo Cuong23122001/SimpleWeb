@@ -13,13 +13,11 @@
     <div class="item">
         {{#each data}}
         <div>
-            <div>
-                <li><img src="{{image}}" width="350" height="300"/></li>
-                <li>Name: {{name}}</li>
-                <li>Age: {{age}}</li>
-                <li>Price: {{price}}</li>
-                <li><a href="/delete?id={{_id}}">Delete</a><a href="/edit?id={{_id}}">Edit</a></li>  
-            </div> 
+            <li class="image"><img src="{{image}}" width="220" height="200"/></li>
+            <li>Name: {{name}}</li>
+            <li>Age: {{age}}</li>
+            <li>Price: {{price}}</li>
+            <li><a href="/delete?id={{_id}}">Delete</a><a href="/edit?id={{_id}}">Edit</a></li>           
         </div>
         {{/each}}  
     </div>

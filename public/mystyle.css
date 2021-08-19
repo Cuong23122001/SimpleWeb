@@ -11,26 +11,35 @@ p a{
     padding: 5px 5px;
     font-weight: bold;
     font-size: 25px;
+    background-color: lightskyblue;
+    color: black;
 }
 p a:hover{
     background-color: #9b0d88;
   }
 .item {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-gap: 5px;
-    background-color: #2196F3;
-    padding: 5px 20px 5px 5px;
+    grid-template-columns:16% 16% 16% 16%;
+    grid-gap: 1em;
+    background-color: lightcoral;
+    padding: 10px 10px;
+    
   }
 .item >div{
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
+    background-color: lemonchiffon;
     padding: 5px 5px;
-    font-size: 18px;
+    font-size: 16px; 
+    
 }
 li{
-    padding: 5px 5px;
+    padding: 5px 0px 5px 0px;
     list-style: none;
+    width: 100%;
+    color: #000000;
+    font-weight: bold;
+}
+.image{
+    text-align: center;
 }
 li a{
     color: black;
