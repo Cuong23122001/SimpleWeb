@@ -5,54 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 15px;
-            text-align: left;
-        }
-        th {
-            background-color: orange;
-            color: white;
-        }
-        tr:nth-child(even) {
-            background-color: white;
-        }
-        tr:nth-child(odd) {
-            background-color:wheat;
-        }   
-    </style>
+    <link rel="stylesheet" href="mystyle.css">
 </head>
 <body>
     <h1>Pet Shop</h1>
-    <p>
-        <a href="/add">Add Pet<a> 
-        <a href="/edit">Edit Pet<a>
-    <p>
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Image</th>
-            <th>Price</th>
-            <th></th>
-            <th></th>
-        </tr>
-        {{#each data}} 
-        <tr>
-           <td>{{name}}</td>
-            <td>{{age}}</td>
-            <td><img src="{{image}}" width="150" height="100"/></td>
-            <td>{{price}}</td>
-            <td><a href="/delete?id={{_id}}">Delete</a></td>
-            <td><a href="/edit?id={{_id}}">Edit</a></td>
-        </tr>
-        {{/each}}
-    </table>
-
-
+    <p><a href="/add">Add Pet</a></p>
+    <div class="item">
+        {{#each data}}
+        <div>
+            <div>
+                <li><img src="{{image}}" width="350" height="300"/></li>
+                <li>Name: {{name}}</li>
+                <li>Age: {{age}}</li>
+                <li>Price: {{price}}</li>
+                <li><a href="/delete?id={{_id}}">Delete</a><a href="/edit?id={{_id}}">Edit</a></li>  
+            </div> 
+        </div>
+        {{/each}}  
+    </div>
+    <div class="footer">
+        Copyright by PetShop - 2021
+    </div>
 </body>
 </html>

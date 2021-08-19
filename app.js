@@ -5,6 +5,8 @@ const{getDB,InserPet,DeletePet,getPetID,UpdatePet}=require('./function');
 app.set('view engine','hbs')
 app.use(express.urlencoded({extended:true}))
 
+app.use(express.static('public'))
+
 app.get('/',async(req,res)=>{
     const dbo = await getDB();
     const allPets = await dbo.collection("pets").find({}).toArray();
