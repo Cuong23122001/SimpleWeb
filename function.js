@@ -1,5 +1,5 @@
 const {ObjectId,MongoClient} = require('mongodb');
-const url = 'mongodb+srv://GCH0805-Cuong:23122001c@cluster0.beaea.mongodb.net/test';
+const url = 'mongodb+srv://GCH0805-Cuong:23122001@cluster0.beaea.mongodb.net/test';
 async function getDB() {
     const client = await MongoClient.connect(url);
     const dbo = client.db("PetShop");
