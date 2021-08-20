@@ -1,6 +1,6 @@
 const {ObjectId,MongoClient} = require('mongodb');
-//const url = 'mongodb://localhost:27017';
-const url = 'mongodb+srv://GCH0805-Cuong:23122001@cluster0.beaea.mongodb.net/test';
+const url = 'mongodb://localhost:27017';
+//const url = 'mongodb+srv://GCH0805-Cuong:23122001@cluster0.beaea.mongodb.net/test';
 
 async function getDB() {
     const client = await MongoClient.connect(url);
@@ -16,9 +16,9 @@ async function DeletePet(id){
     const db = await getDB();
     await db.collection("pets").deleteOne({_id:ObjectId(id)});
 }
-async function UpdatePet(id, nameInput, ageInput,imageInput,priceInput) {
+async function UpdatePet(id, nameInput,imageInput,priceInput) {
     const filter = { _id: ObjectId(id) };
-    const newValue = { $set: { name: nameInput, age: ageInput,image: imageInput,price:priceInput } };
+    const newValue = { $set: { name: nameInput,image: imageInput,price:priceInput } };
 
     const dbo = await getDB();
     await dbo.collection("pets").updateOne(filter, newValue);

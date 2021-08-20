@@ -18,10 +18,9 @@ app.get('/add',(req,res)=>{
 })
 app.post('/addPet',async(req,res)=>{
     const nameInput = req.body.txtName;
-    const ageInput = req.body.txtAge;
     const imageInput = req.body.txtImage;
     const priceInput = req.body.txtPrice;
-    const newPet = {name: nameInput,age:ageInput,image:imageInput,price:priceInput};
+    const newPet = {name: nameInput,image:imageInput,price:priceInput};
 
     InserPet(newPet);
     console.log("OK");
@@ -36,12 +35,11 @@ app.get('/edit',async(req,res)=>{
 })
 app.post('/update', async(req,res)=>{
     const nameInput = req.body.txtName;
-    const ageInput = req.body.txtAge;
     const imageInput = req.body.txtImage;
     const priceInput = req.body.txtPrice;
     const id = req.body.txtId;
 
-    UpdatePet(id, nameInput, ageInput,imageInput,priceInput);
+    UpdatePet(id, nameInput,imageInput,priceInput);
     res.redirect("/");
 })
 

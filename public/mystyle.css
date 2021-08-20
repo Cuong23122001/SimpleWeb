@@ -1,5 +1,5 @@
 body{
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaue-d1muFABZ8QJ5mcTvGwJbKJGo62PlPuQ&usqp=CAU");
+    background-image: url("https://i.pinimg.com/736x/a7/5b/5a/a75b5ad188176b532c3be6f8f35f4291.jpg");
     background-size: 100%;
 }
 .header{
@@ -7,7 +7,7 @@ body{
 }
 h1{
     text-align: center;
-    color: #ff00a5;
+    color: orangered;
     font-size: 50px;
     margin-bottom: 80px;
 }
@@ -24,22 +24,22 @@ h1{
     padding: 5px 5px;
     font-weight: bold;
     font-size: 25px;
-    background-color: lightskyblue;
+    background-color: #ff5200;
     color: black;
 }
 .option a:hover{
-    background-color: lightcyan;
+    background-color: white;
   }
 .item {
     display: grid;
     grid-template-columns: 24% 24% 24% 24%;
     grid-gap: 13px;
-    background-color: rgb(199 246 253);
+    background-color: #8195f4c9;
     padding: 10px 10px;
     max-width: fit-content;
 }
 .item >div{
-    background-color: #fa87f69e;
+    background-color: #e82d2dc7;
     padding: 5px 10px;
     max-width: fit-content;
 }
@@ -47,25 +47,27 @@ li{
     padding: 5px 0px 5px 0px;
     list-style: none;
     width: 100%;
-    color: #000000;
+    color: white;
     font-weight: bold;
 }
 li a{
-    color: black;
+    color: white;
     padding: 5px 5px;
     text-decoration: none;
 }
 li a:hover{
     background-color: lightcyan;
+    color: black;
 }
 .footer{
     height: 30px;
     padding: 20px 0px 20px 0px;
     text-align: center;
-    background: #d52a2a6e;
+    background: #d3baba6e;
     font-weight: bold;
     letter-spacing: 0.1em;
     font-size: 25px;
+    color: rgb(255, 255, 255);
 }
 *{
     margin: 0;
@@ -73,6 +75,14 @@ li a:hover{
 .logo{
     margin: 10px 10px;
     text-align: left;
+}
+.form{
+    border: 2px solid rgb(255, 255, 255);
+    max-width: fit-content;
+    padding: 5px 5px;
+    font-weight: bolder;
+    margin: 0;
+    color: #ffffff;
 }
 .home{
     margin-bottom: 15px;
@@ -87,4 +97,11 @@ li a:hover{
 }
 .home a:hover{
     background-color: lightcyan;
+}
+.button{
+    font-size: 20px;
+    margin-top: 5px;
+}
+.button:hover{
+    background-color: lightsalmon;
 }

@@ -10,17 +10,16 @@
 <body>
     <h1 class="logo">Edit Pet</h1>
     <div class="home"><a href="/">Home</a></div>
-    <div>
+    <div class="form">
     <form action="/update" method="post">
         <input type="hidden" name="txtId" value="{{pet._id}}">
-        Name <input type="text" name="txtName" value="{{pet.name}}">
+        Name: <input type="text" name="txtName" value="{{pet.name}}">
         <br>
-        Age <input type="text" name ="txtAge" value="{{pet.age}}">
+        Image: <input type="text" name="txtImage" value="{{pet.image}}">
         <br>
-        Image <input type="text" name="txtImage" value="{{pet.image}}">
+        Price: <input type="text" name="txtPrice" value="{{pet.price}}">
         <br>
-        Price <input type="text" name="txtPrice" value="{{pet.price}}">
-        <input type="submit" value="Update">
+        <input class="button" type="submit" value="Update">
     </form>
     </div>
 </body>
