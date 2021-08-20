@@ -1,12 +1,25 @@
 body{
-    background-color: blanchedalmond;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaue-d1muFABZ8QJ5mcTvGwJbKJGo62PlPuQ&usqp=CAU");
+    background-size: 100%;
+}
+.header{
+    margin-bottom: -130px;
 }
 h1{
     text-align: center;
-    color: orangered;
+    color: #ff00a5;
     font-size: 50px;
+    margin-bottom: 80px;
 }
-p a{
+.main{
+    display: grid;
+    grid-template-columns: 20% 70%;
+}
+.option{
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.option a{
     text-decoration: none;
     padding: 5px 5px;
     font-weight: bold;
@@ -14,22 +27,21 @@ p a{
     background-color: lightskyblue;
     color: black;
 }
-p a:hover{
-    background-color: #9b0d88;
+.option a:hover{
+    background-color: lightcyan;
   }
 .item {
     display: grid;
-    grid-template-columns:16% 16% 16% 16%;
-    grid-gap: 1em;
-    background-color: lightcoral;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-gap: 13px;
+    background-color: rgb(199 246 253);
     padding: 10px 10px;
-    
-  }
+    max-width: fit-content;
+}
 .item >div{
-    background-color: lemonchiffon;
-    padding: 5px 5px;
-    font-size: 16px; 
-    
+    background-color: #fa87f69e;
+    padding: 5px 10px;
+    max-width: fit-content;
 }
 li{
     padding: 5px 0px 5px 0px;
@@ -38,23 +50,41 @@ li{
     color: #000000;
     font-weight: bold;
 }
-.image{
-    text-align: center;
-}
 li a{
     color: black;
     padding: 5px 5px;
     text-decoration: none;
 }
 li a:hover{
-    background-color: #9b0d88;
+    background-color: lightcyan;
 }
 .footer{
     height: 30px;
     padding: 20px 0px 20px 0px;
     text-align: center;
-    background: white;
+    background: #d52a2a6e;
     font-weight: bold;
     letter-spacing: 0.1em;
     font-size: 25px;
+}
+*{
+    margin: 0;
+}
+.logo{
+    margin: 10px 10px;
+    text-align: left;
+}
+.home{
+    margin-bottom: 15px;
+}
+.home a{
+    text-decoration: none;
+    padding: 5px 5px;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: lightskyblue;
+    color: black;
+}
+.home a:hover{
+    background-color: lightcyan;
 }
