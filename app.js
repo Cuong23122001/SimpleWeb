@@ -1,7 +1,7 @@
 const express = require ('express');
 const app = express()
 
-const{getDB,InserPet,DeletePet,getPetID,UpdatePet}=require('./function');
+const{getDB,InserToy,DeleteToy,getToyID,UpdateToy}=require('./function');
 app.set('view engine','hbs')
 app.use(express.urlencoded({extended:true}))
 
@@ -9,29 +9,28 @@ app.use(express.static('public'))
 
 app.get('/',async(req,res)=>{
     const dbo = await getDB();
-    const allPets = await dbo.collection("pets").find({}).toArray();
-    res.render('index',{data:allPets})
+    const allToys = await dbo.collection("toys").find({}).toArray();
+    res.render('index',{data:allToys})
 })
 
 app.get('/add',(req,res)=>{
     res.render("add");
 })
-app.post('/addPet',async(req,res)=>{
+app.post('/addToy',async(req,res)=>{
     const nameInput = req.body.txtName;
     const imageInput = req.body.txtImage;
     const priceInput = req.body.txtPrice;
-    const newPet = {name: nameInput,image:imageInput,price:priceInput};
+    const newToy = {name: nameInput,image:imageInput,price:priceInput};
 
-    InserPet(newPet);
+    InserToy(newToy);
     console.log("OK");
     res.redirect('/');
 })
 
-
 app.get('/edit',async(req,res)=>{
     const id = req.query.id;
-    const e = await getPetID(id);
-    res.render("edit",{pet:e});
+    const e = await getToyID(id);
+    res.render("edit",{toy:e});
 })
 app.post('/update', async(req,res)=>{
     const nameInput = req.body.txtName;
@@ -39,19 +38,16 @@ app.post('/update', async(req,res)=>{
     const priceInput = req.body.txtPrice;
     const id = req.body.txtId;
 
-    UpdatePet(id, nameInput,imageInput,priceInput);
+    UpdateToy(id, nameInput,imageInput,priceInput);
     res.redirect("/");
 })
-
-
 
 app.get('/delete',async(req,res)=>{
     const id = req.query.id;
 
-    DeletePet(id);
+    DeleteToy(id);
     res.redirect('/')
 })
-
 
 
 const PORT = process.env.PORT || 2001;
