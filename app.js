@@ -20,11 +20,21 @@ app.post('/addToy',async(req,res)=>{
     const nameInput = req.body.txtName;
     const imageInput = req.body.txtImage;
     const priceInput = req.body.txtPrice;
-    const newToy = {name: nameInput,image:imageInput,price:priceInput};
-
-    InserToy(newToy);
-    console.log("OK");
-    res.redirect('/');
+    
+    var err = {}
+    var isError = false;
+    if(nameInput == null || nameInput.length <5){
+        err.name = "Length name must >=5 world!"
+        isError = true;
+    }
+    if(isError){
+        res.render('add',{error: err})
+    }
+    if(!isError){
+        const newToy = {name: nameInput,image:imageInput,price:priceInput};
+        InserToy(newToy)
+        res.redirect('/');
+    }  
 })
 
 app.get('/edit',async(req,res)=>{

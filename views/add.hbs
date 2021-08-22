@@ -12,7 +12,8 @@
     <div class="home"><a href="/">Home</a></div>
     <div class="form">
         <form action="/addToy" method="post">
-            Name: <input type="text" name="txtName"> 
+            Name: <input type="text" name="txtName">
+            <span>{{error.name}}</span>
             <br>
             Image: <input type="text" name="txtImage">   
             <br>
